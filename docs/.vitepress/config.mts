@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base:"/EvanSnowly.github.io/",
   title: "Snow Document",
   description: "个人技术文档",
   titleTemplate: "Snow",
