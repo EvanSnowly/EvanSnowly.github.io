@@ -6,7 +6,7 @@ hero:
   name: "Snow⚡️Document"
   text: "My personal technical documentation"
   image:
-    src: ./public/logo.svg
+    src: logo.svg
     alt: VitePress
   actions:
     - theme: brand
