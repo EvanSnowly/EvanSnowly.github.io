@@ -14,7 +14,7 @@ hero:
       link: /markdown-examples
     - theme: alt
       text: View on Github
-      link: https://github.com/EvanSnowly
+      link: https://github.com/EvanSnowly/EvanSnowly.github.io
 features:
   - title: Personal Frontend Components
     icon: 💡
