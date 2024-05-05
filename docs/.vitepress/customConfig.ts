@@ -17,17 +17,6 @@ export const nav: DefaultTheme.NavItem[]  = [
 ]
 
 export const sidebar:DefaultTheme.Sidebar = {
-    "/tools/tool/": [
-        {
-            text: 'Guide',
-            collapsed: false,
-            items: [
-                {text: 'Index', link: '/guide/'},
-                {text: 'One', link: '/guide/one'},
-                {text: 'Two', link: '/guide/two'}
-            ]
-        }
-    ],
     "/frontends/typeScript":[
         {
             text:"typeScript",
