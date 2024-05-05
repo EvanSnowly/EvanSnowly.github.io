@@ -22,7 +22,8 @@ export const sidebar:DefaultTheme.Sidebar = {
             text:"typeScript",
             collapsed:false,
             items:[
-                {text:"数据校验函数",link:"/frontends/typeScript/1.数据正则校验实现"}
+                {text:"数据校验函数",link:"/frontends/typeScript/1.数据正则校验实现"},
+                {text:"axios封装",link:"/frontends/typeScript/2.axios封装"}
             ]
         }
     ]
