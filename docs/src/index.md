@@ -25,6 +25,7 @@ features:
   - title: Personal encapsulation tools
     icon: 🛠️
     details: Packaged with Java and TypeScript, providing comprehensive type hints and documentationt   
+ 
 ---
 
 
