@@ -10,21 +10,18 @@ hero:
     alt: VitePress
   actions:
     - theme: brand
-      text: Get Started
-      link: /markdown-examples
-    - theme: alt
       text: View on Github
       link: https://github.com/EvanSnowly/EvanSnowly.github.io
 features:
   - title: Personal Frontend Components
     icon: 💡
-    details: Built with Vue3+Element-Plus+TypeScript
+    details: Built with React+Ant Design+TypeScript
   - title: Solving Business and Technical Challenges
     icon: 💪
     details: Such as SQL Optimization,Frameworks, IO
   - title: Personal encapsulation tools
     icon: 🛠️
-    details: Packaged with Java and TypeScript, providing comprehensive type hints and documentationt   
+    details: Packaged with Go and TypeScript, providing comprehensive type hints and documentationt   
  
 ---
 
