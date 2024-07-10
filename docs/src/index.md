@@ -13,15 +13,15 @@ hero:
       text: View on Github
       link: https://github.com/EvanSnowly/EvanSnowly.github.io
 features:
-  - title: 前端组件
-    icon: 💡
-    details: 使用 React+Antd+TypeScript构建   
-  - title: 解决技术难点
-    icon: 💪
-    details: 并发,io,中间件,sql优化
-  - title: 个人项目
-    icon: 🛠️
-    details: 使用Go+React+中间件构建的全栈项目
+  - title: 算法笔记
+    icon: 📚︎
+    details: 记录数据结构和leecode刷题思路笔记(golang实现)
+  - title: 博客
+    icon: 🗞︎
+    details: 网络,并发,框架(gin,gorm,grpc),中间件(redis,mysql),云原生(docker,k8s)等
+  - title: 项目
+    icon: 😃
+    details: 学习后做的小项目等
     
 
  
