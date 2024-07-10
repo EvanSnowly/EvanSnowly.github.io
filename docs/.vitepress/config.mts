@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitepress'
 import {nav, sidebar} from "./customConfig";
 export default defineConfig({
-  appearance:false,
   title: "Snow Document",
   description: "个人技术文档",
   titleTemplate: "Snow",

@@ -22,16 +22,33 @@
   );
   --vp-home-hero-image-filter: blur(150px);
 }
+
+
+
+
 .box {
-  border: 2px solid rgba(100, 100, 100, 0);
+  position: relative;
+  display: inline-block;
+  padding: 20px;
   border-radius: 12px;
+  transition: background-color 0.3s;
+
 }
 
-.box:hover {
-  cursor: pointer;
-  border: 2px solid transparent;
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
-  background-image: linear-gradient(to right, #ffffff, #34f1ff),
-    linear-gradient(90deg, #8f41e9, #578aef);
+.box::before {  
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #8f41e9, #578aef);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.box:hover::before {
+  opacity: 1;
 }

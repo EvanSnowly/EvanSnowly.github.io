@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Snow⚡️Document"
-  text: "My personal technical documentation"
+  text: "个人技术文档"
   image:
     src: logo.svg
     alt: VitePress
@@ -13,15 +13,17 @@ hero:
       text: View on Github
       link: https://github.com/EvanSnowly/EvanSnowly.github.io
 features:
-  - title: Personal Frontend Components
+  - title: 前端组件
     icon: 💡
-    details: Built with React+Ant Design+TypeScript
-  - title: Solving Business and Technical Challenges
+    details: 使用 React+Antd+TypeScript构建   
+  - title: 解决技术难点
     icon: 💪
-    details: Such as SQL Optimization,Frameworks, IO
-  - title: Personal encapsulation tools
+    details: 并发,io,中间件,sql优化
+  - title: 个人项目
     icon: 🛠️
-    details: Packaged with Go and TypeScript, providing comprehensive type hints and documentationt   
+    details: 使用Go+React+中间件构建的全栈项目
+    
+
  
 ---
 
