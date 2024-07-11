@@ -1,7 +1,7 @@
-# 使用技术
+# Technologies Used
 Gorm Goroutine Mysql
 
-## 1. 创建数据库表
+## 1. Create Database Table
 
 ```sql
 create table users
@@ -14,11 +14,9 @@ create table users
     address  varchar(255) not null,
     nickname varchar(50)  not null
 );
-
-
 ```
 
-## 2. 创建Struct
+## 2.  Create Struct
 
 ```go
 type User struct {
@@ -31,9 +29,8 @@ type User struct {
 }
 ```
 
-## 3.创建数据源
-注意这里要设置慢sql时间,避免打印io影响性能
-
+## 3.Create Data Source
+Note: Set a slow SQL time here to avoid logging IO affecting performance.
 ```go
  newLogger := logger.New(
 		log.New(os.Stdout, "\r\n", log.LstdFlags), // io writer
@@ -53,7 +50,7 @@ type User struct {
 	sqlDb.SetMaxIdleConns(20)
 ```
 
-## 4.生成测试数据方法
+## 4.Generate Test Data Method
 ```go
 func getUser() User {
 	user := User{
@@ -68,7 +65,7 @@ func getUser() User {
 }
 ```
 
-## 5.批量插入方法
+## 5.Batch Insert Method
 ```go
 func batchInsert(num int) {
 	defer wg.Done()
@@ -82,8 +79,9 @@ func batchInsert(num int) {
 
 ```
 
-## 6.主程序
-使用WaitGroup来等待所有goroutine执行完毕,创建100个goroutine,每个goroutine执行10000条数据,go默认使用全部CPU核心执行
+## 6.Main Program
+Use WaitGroup to wait for all goroutines to complete. Create 100 goroutines, each inserting 10,000 records. Go utilizes all available CPU cores by default.
+
 ```go
 var wg sync.WaitGroup
 
@@ -97,16 +95,14 @@ func main() {
 	wg.Wait()
 	now1 := time.Now()
 	spend := now1.Sub(now).Seconds()
-
-	fmt.Println("耗时：", spend)
+	fmt.Println("time consuming:", spend)
 
 }
 ```
-## 7.最后
-配置:11th Gen Intel(R) Core(TM)i5-11260H @ 2.60GHz 2.61 GHz 16G内存 <br>
-耗时: 9.1486998
-
+## 7.Conclusion
+Configuration: 11th Gen Intel(R) Core(TM) i5-11260H @ 2.60GHz 2.61 GHz 16GB RAM <br>
+Time spent: 9.1486998
 
 ::: warning
-由于是批量生成sql，占位符最高六万多个,所以每次只能插入10000条数据
+Due to the batch SQL generation, with placeholders exceeding sixty thousand, only 10,000 records can be inserted at a time.
 :::

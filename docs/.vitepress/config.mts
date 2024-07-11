@@ -7,8 +7,22 @@ export default defineConfig({
   cleanUrls: true,
   srcDir: "./src",
   lastUpdated: true,
+  head: [
+    [
+      'link',
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' }
+    ],
+    [
+      'link',
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
+    ],
+    [
+      'link',
+      { href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', rel: 'stylesheet' }
+    ]
+  ],
   themeConfig: {
-    
+    outline:[2,3],
     logo: "/head_logo.svg",
     search: {
       provider: "local",
