@@ -24,6 +24,10 @@ export const sidebar: DefaultTheme.Sidebar = {
     {
       text:"Memoery Cache System",
       link:"/blog/cacheSystem"
+    },
+    {
+      text:"Send Ping",
+      link:"/blog/icmpPing"
     }
   ],
 };
