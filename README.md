@@ -1,5 +1,6 @@
 ## My Blog
 
+[preview blog](https://evansnowly.github.io/)
 This blog serves as a platform for me to share my technical knowledge and experiences. Here, you'll find a collection of:
 
 * **Algorithm Notes:** Deep dives into data structures and problem-solving strategies for platforms like LeetCode, often implemented in Go. 
@@ -7,6 +8,5 @@ This blog serves as a platform for me to share my technical knowledge and experi
 * **Projects:** Showcase of smaller projects I've built during my learning journey. 
 
 This site is built with VitePress, a modern static site generator. Feel free to explore the content and learn something new!
-
 
 **Stay tuned** for new content as I continue to explore and document my technical adventures.
