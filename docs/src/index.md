@@ -6,7 +6,7 @@ hero:
   name: "Snow⚡️Document"
   text: "Personal Technical Documentation"
   image:
-    src: logo.svg
+    src: /logo.svg
     alt: VitePress
   actions:
     - theme: brand
@@ -23,3 +23,8 @@ features:
     icon: 😃
     details: Small projects created while learning.
 ---
+###  Special thanks
+- [Vite press](https://vitepress.dev/)  Build tools for this site
+- [ChatGpt-3.5](https://chatgpt.com/)  Documentation generation and translation for this site
+
+

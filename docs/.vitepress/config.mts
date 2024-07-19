@@ -1,8 +1,7 @@
-import { defineConfig } from 'vitepress'
+import { DefaultTheme, defineConfig, UserConfig } from 'vitepress'
 import {nav, sidebar} from "./customConfig";
-export default defineConfig({
+const publicCofig:UserConfig<DefaultTheme.Config> = {
   title: "Snow Document",
-  description: "个人技术文档",
   titleTemplate: "Snow",
   cleanUrls: true,
   srcDir: "./src",
@@ -24,15 +23,6 @@ export default defineConfig({
   themeConfig: {
     outline:[2,3],
     logo: "/head_logo.svg",
-    search: {
-      provider: "local",
-    },
-    footer: {
-      message: "若结果并非所愿,那就再尘埃落地前放手一搏",
-      copyright: "2972561826@qq.com",
-    },
-    nav,
-    sidebar,
     socialLinks: [
       { icon: "github", link: "https://github.com/EvanSnowly" },
       {
@@ -43,4 +33,69 @@ export default defineConfig({
       }
     ],
   },
+}
+
+
+export default defineConfig({
+  ...publicCofig,
+  locales:{
+     "root":{
+      label: 'English',
+      lang: 'en',
+      themeConfig:{
+        footer: {
+          message: "Meet your first blog",
+          copyright: "eamil:2972561826@qq.com evansnowly@gmail.com",
+        },
+        nav,
+        sidebar,
+        outline:[2,3],
+      }
+     },
+     "zn":{
+      label:"简体中文",
+      lang:"zn",
+      themeConfig:{
+        footer: {
+          message: "遇见你的第一个博客",
+          copyright: "邮箱:2972561826@qq.com evansnowly@gmail.com",
+        },
+        nav: [
+          { text: '首页', link: '/zn/' },
+          {
+            text: '算法笔记',
+            link: '/zn/note/index',
+          },
+          {
+            text: '博客',
+            link: '/zn/blog/index',
+          },
+          {
+            text: '项目',
+            link: '/zn/project',
+          },
+        ],
+        sidebar: {
+          '/zn/blog': [
+            {
+              text: '插入百万数据',
+              link: '/zn/blog/insertMilionOfData',
+            },
+            {
+              text: '内存缓存系统',
+              link: '/zn/blog/cacheSystem',
+            },
+            {
+              text: '发送Ping',
+              link: '/zn/blog/icmpPing',
+            }
+          ],
+      }
+    }
+     }
+  },
 });
+
+
+
+

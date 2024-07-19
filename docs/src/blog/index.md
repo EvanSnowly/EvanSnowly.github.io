@@ -45,8 +45,6 @@ Cloud-native technologies enable you to build and deploy scalable applications i
 
 - **Docker**: Containerization basics, creating Dockerfiles, and managing containers.
 - **Kubernetes (K8s)**: Introduction to Kubernetes, setting up clusters, and deploying applications.
-- **CI/CD Pipelines**: Automating your build and deployment processes with CI/CD pipelines.
-- **Service Meshes**: Enhancing microservices communication with service meshes like Istio.
 
 ## Conclusion
 
