@@ -25,4 +25,4 @@ features:
 ---
 ### 特别感谢
 - [VitePress](https://vitepress.dev/) 本站点的构建工具
-- [Google-Gemini](https://gemini.google.com/app) 本站点的文档生成和翻译工具
+- [ChatGpt](https://chatgpt.com/) 本站点的文档生成和翻译工具
