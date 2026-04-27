@@ -1,6 +1,6 @@
-# WuXuefeng Personal Blog
+# Agentic Full-Stack Engineering OS
 
-A glass-inspired personal blog built with Vite, React, TypeScript, and CSS.
+A static GitHub Pages portfolio built with Vite, React, TypeScript, and CSS.
 
 ## Development
 
@@ -15,4 +15,4 @@ npm run dev
 npm run build
 ```
 
-The site is deployed to GitHub Pages from GitHub Actions.
+The production build is emitted to `docs/` for GitHub Pages deployment.

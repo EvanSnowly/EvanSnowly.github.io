@@ -1,131 +1,304 @@
 import './App.css'
 
-const skills = [
-  'Java / Spring Boot / JVM tuning',
-  'React / TypeScript / Vite',
-  'Redis / Kafka / RabbitMQ',
-  'MySQL / PostgreSQL / Elasticsearch',
-  'Docker / Linux / CI pipelines',
-  'Microservices / Observability',
+const overviewCards = [
+  {
+    title: 'Agent Workflow Engineering',
+    detail: 'Designing multi-step agent flows with guardrails, state transitions, and observable execution.',
+  },
+  {
+    title: 'LLM Tool Calling',
+    detail: 'Turning prompts into callable systems with stable interfaces, typed inputs, and controllable side effects.',
+  },
+  {
+    title: 'Schema-Aware Database Agents',
+    detail: 'Teaching agents to reason from real table structure instead of blindly loading oversized context windows.',
+  },
+  {
+    title: 'RAG & Knowledge Systems',
+    detail: 'Building retrieval pipelines, document routing, and context assembly for production use instead of demos.',
+  },
+  {
+    title: 'Full-Stack Web Development',
+    detail: 'Shipping React, TypeScript, APIs, and deployment pipelines as one coherent product surface.',
+  },
+  {
+    title: 'Automation & Internal Tools',
+    detail: 'Replacing repetitive engineering work with focused interfaces, scripts, and team-facing internal systems.',
+  },
 ]
 
-const posts = [
+const skills = [
   {
-    label: 'Architecture',
-    title: 'Writing systems that stay simple under pressure',
-    meta: 'Notes on Java services, boundaries, and production tradeoffs.',
+    name: 'MySQL Schema Navigator',
+    description: 'On-demand database schema inspector for AI agents.',
+    solves: 'Avoid loading hundreds of tables into context and keep table inspection grounded in the configured database.',
+    stack: 'Python / MySQL / Tool Calling / CLI Rendering',
+    link: 'https://github.com/EvanSnowly/mysql-table-context',
   },
   {
-    label: 'Frontend',
-    title: 'React interfaces with tactile motion and quiet detail',
-    meta: 'A working log for interaction, composition, and design systems.',
+    name: 'SQL Agent Service',
+    description: 'DDL-aware SQL analysis service for agentic database workflows.',
+    solves: 'Converts schema artifacts into callable capabilities for query planning, inspection, and downstream automation.',
+    stack: 'TypeScript / SQL Parsing / Agent Services',
+    link: 'https://github.com/EvanSnowly/sql-agent',
   },
   {
-    label: 'Middleware',
-    title: 'The boring parts that make distributed apps reliable',
-    meta: 'Queues, caches, search, storage, and the discipline around them.',
+    name: 'Chat History Locator',
+    description: 'A focused retrieval utility for locating prior Gemini chat context.',
+    solves: 'Reduces manual backtracking when an agent or user needs to recover a previous conversation path quickly.',
+    stack: 'JavaScript / Retrieval UX / Browser Workflow',
+    link: 'https://github.com/EvanSnowly/gemini-chat-history',
   },
+]
+
+const projects = [
+  {
+    name: 'mysql-table-context',
+    type: 'Agent Skill',
+    stack: 'Python / MySQL / Vendored PyMySQL',
+    capability: 'Schema inspection, comment extraction, sample row preview, and terminal-friendly table rendering.',
+    link: 'https://github.com/EvanSnowly/mysql-table-context',
+  },
+  {
+    name: 'sql-agent',
+    type: 'Agent Infrastructure',
+    stack: 'TypeScript / SQL / Service Design',
+    capability: 'Analyzes SQL DDL and exposes agent-friendly services for structured database understanding.',
+    link: 'https://github.com/EvanSnowly/sql-agent',
+  },
+  {
+    name: 'ddd-base',
+    type: 'Backend Foundation',
+    stack: 'Java / DDD / Architecture Scaffold',
+    capability: 'Provides a domain-driven baseline for turning service ideas into maintainable production modules.',
+    link: 'https://github.com/EvanSnowly/ddd-base',
+  },
+  {
+    name: 'EvanSnowly.github.io',
+    type: 'Static Engineering Homepage',
+    stack: 'React / TypeScript / Vite / GitHub Pages',
+    capability: 'A deployable portfolio surface for communicating agent systems, skills, projects, and engineering logs.',
+    link: 'https://github.com/EvanSnowly/EvanSnowly.github.io',
+  },
+]
+
+const logs = [
+  {
+    id: 'LOG 001',
+    title: 'Building Schema-Aware Agents',
+    summary: 'How table metadata, comments, and sample rows become reliable context primitives for database agents.',
+  },
+  {
+    id: 'LOG 002',
+    title: 'Tool Calling Patterns',
+    summary: 'Design patterns for keeping tools narrow, typed, observable, and safe enough for repeated production use.',
+  },
+  {
+    id: 'LOG 003',
+    title: 'From Prompt to Production',
+    summary: 'The operational path from prototype interaction to deployable systems with testing, interfaces, and rollback thinking.',
+  },
+]
+
+const consoleSignals = [
+  { label: 'System Status', value: 'ACTIVE' },
+  { label: 'Deployment', value: 'GitHub Pages' },
+  { label: 'Primary Mode', value: 'Agent OS' },
+  { label: 'Context Layer', value: 'Schema-aware' },
 ]
 
 function App() {
   return (
-    <main className="site-shell">
-      <div className="aurora aurora-one" />
-      <div className="aurora aurora-two" />
-      <div className="grain" />
+    <main className="app-shell">
+      <div className="backdrop-grid" />
+      <div className="backdrop-glow backdrop-glow-one" />
+      <div className="backdrop-glow backdrop-glow-two" />
 
-      <nav className="nav glass-panel" aria-label="Primary navigation">
-        <a className="brand" href="#top" aria-label="WuXuefeng home">
-          <span className="brand-mark">WX</span>
-          <span>WuXuefeng</span>
+      <header className="top-bar surface-card">
+        <a className="brand" href="#top" aria-label="Agentic Full-Stack Engineering OS home">
+          <span className="brand-mark">AO</span>
+          <span className="brand-copy">
+            <strong>Agentic Full-Stack Engineering OS</strong>
+            <small>Operations surface for shipping production AI systems</small>
+          </span>
         </a>
-        <div className="nav-links">
-          <a href="#stack">Stack</a>
-          <a href="#writing">Writing</a>
-          <a href="#music">Music</a>
-        </div>
-      </nav>
 
-      <section id="top" className="hero-section">
-        <div className="hero-copy glass-panel reveal">
-          <p className="eyebrow">Personal blog / engineering notebook</p>
-          <h1>Building reliable software with a glass-clear interface.</h1>
-          <p className="hero-text">
-            I am WuXuefeng, a Java ecosystem engineer with React frontend experience and practical middleware knowledge. This space collects my technical thinking, system notes, and the music that keeps the rhythm going.
+        <div className="top-bar-actions">
+          <span className="status-pill">
+            <span className="status-dot" />
+            ACTIVE
+          </span>
+          <a className="github-button" href="https://github.com/EvanSnowly" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+        </div>
+      </header>
+
+      <section id="top" className="hero-layout">
+        <div className="hero-panel surface-card">
+          <p className="section-kicker">Agentic Full-Stack Engineering OS</p>
+          <h1>Agent Full-Stack Developer</h1>
+          <p className="hero-copy">
+            Building tool-driven AI agents, schema-aware systems, and production-ready full-stack applications.
           </p>
+          <p className="hero-support">
+            I work across agent workflows, tool interfaces, database-aware reasoning, RAG pipelines, and shipping web products from prototype to deployment.
+          </p>
+
           <div className="hero-actions">
-            <a className="primary-action" href="#writing">Read the notebook</a>
-            <a className="secondary-action" href="https://github.com/EvanSnowly" target="_blank" rel="noreferrer">GitHub</a>
+            <a className="primary-button" href="https://github.com/EvanSnowly" target="_blank" rel="noreferrer">
+              View GitHub
+            </a>
+            <a className="secondary-button" href="#skills">
+              Explore Skills
+            </a>
+            <a className="secondary-button" href="#logs">
+              Read Engineering Logs
+            </a>
           </div>
         </div>
 
-        <aside className="identity-card glass-panel reveal" aria-label="Profile summary">
-          <div className="orbital-ring" />
-          <div className="avatar-core">W</div>
-          <p className="status-pill">Available for serious engineering conversations</p>
-          <div className="identity-grid">
-            <span>Name</span>
-            <strong>WuXuefeng</strong>
-            <span>Focus</span>
-            <strong>Java + React</strong>
-            <span>Signal</span>
-            <strong>Music driven</strong>
+        <aside className="console-panel surface-card" aria-label="Engineering console">
+          <div className="console-header">
+            <div className="console-lights" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </div>
+            <span>agent-runtime.console</span>
+          </div>
+
+          <div className="signal-list">
+            {consoleSignals.map((signal) => (
+              <div className="signal-row" key={signal.label}>
+                <span>{signal.label}</span>
+                <strong>{signal.value}</strong>
+              </div>
+            ))}
+          </div>
+
+          <div className="console-note">
+            <span className="note-label">Operating Thesis</span>
+            <p>I build systems where LLMs are not demos, but production components.</p>
           </div>
         </aside>
       </section>
 
-      <section id="stack" className="section-block">
-        <div className="section-heading reveal">
-          <p className="eyebrow">Technical field</p>
-          <h2>Backend depth, frontend sense, middleware fluency.</h2>
+      <section id="overview" className="content-section">
+        <div className="section-heading">
+          <p className="section-kicker">System Overview</p>
+          <h2>Core engineering modules for agentic product delivery.</h2>
         </div>
-        <div className="skill-cloud">
-          {skills.map((skill, index) => (
-            <span className="skill-chip glass-panel reveal" style={{ '--delay': `${index * 70}ms` } as React.CSSProperties} key={skill}>
-              {skill}
-            </span>
-          ))}
-        </div>
-      </section>
 
-      <section id="writing" className="section-block split-layout">
-        <div className="section-heading reveal">
-          <p className="eyebrow">Selected notes</p>
-          <h2>Future articles will live here with a calm, editorial rhythm.</h2>
-          <p className="section-copy">
-            The first version is a polished static front page. It leaves clean space for Markdown, project writeups, and deeper engineering essays later.
-          </p>
-        </div>
-        <div className="post-stack">
-          {posts.map((post, index) => (
-            <article className="post-card glass-panel reveal" style={{ '--delay': `${index * 90}ms` } as React.CSSProperties} key={post.title}>
-              <span>{post.label}</span>
-              <h3>{post.title}</h3>
-              <p>{post.meta}</p>
+        <div className="overview-grid">
+          {overviewCards.map((card, index) => (
+            <article
+              className="overview-card surface-card"
+              style={{ '--delay': `${index * 55}ms` } as React.CSSProperties}
+              key={card.title}
+            >
+              <span className="card-index">{String(index + 1).padStart(2, '0')}</span>
+              <h3>{card.title}</h3>
+              <p>{card.detail}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="music" className="music-section glass-panel reveal">
-        <div>
-          <p className="eyebrow">Listening mode</p>
-          <h2>Music is the private metronome behind the work.</h2>
-          <p>
-            Clean systems need rhythm: quiet concentration, sharp transitions, and a sense for when complexity becomes noise.
-          </p>
+      <section id="skills" className="content-section">
+        <div className="section-heading">
+          <p className="section-kicker">Skills Showcase</p>
+          <h2>Agent tools with clear scope, real repositories, and deployment-level intent.</h2>
         </div>
-        <div className="equalizer" aria-hidden="true">
-          {Array.from({ length: 18 }, (_, index) => (
-            <span style={{ '--i': index } as React.CSSProperties} key={index} />
+
+        <div className="card-grid">
+          {skills.map((skill, index) => (
+            <article
+              className="info-card surface-card"
+              style={{ '--delay': `${index * 70}ms` } as React.CSSProperties}
+              key={skill.name}
+            >
+              <div className="card-label">Skill</div>
+              <h3>{skill.name}</h3>
+              <p>{skill.description}</p>
+              <dl className="meta-list">
+                <div>
+                  <dt>Solves</dt>
+                  <dd>{skill.solves}</dd>
+                </div>
+                <div>
+                  <dt>Stack</dt>
+                  <dd>{skill.stack}</dd>
+                </div>
+              </dl>
+              <a className="text-link" href={skill.link} target="_blank" rel="noreferrer">
+                GitHub Repository
+              </a>
+            </article>
           ))}
         </div>
       </section>
 
-      <footer className="footer">
-        <span>WuXuefeng</span>
-        <span>Java ecosystem / React interfaces / Middleware practice</span>
-      </footer>
+      <section id="projects" className="content-section">
+        <div className="section-heading">
+          <p className="section-kicker">Projects</p>
+          <h2>GitHub projects shaped around usable engineering surfaces.</h2>
+        </div>
+
+        <div className="card-grid project-grid">
+          {projects.map((project, index) => (
+            <article
+              className="info-card surface-card"
+              style={{ '--delay': `${index * 65}ms` } as React.CSSProperties}
+              key={project.name}
+            >
+              <div className="card-meta">
+                <span className="card-label">{project.type}</span>
+                <span className="stack-pill">{project.stack}</span>
+              </div>
+              <h3>{project.name}</h3>
+              <p>{project.capability}</p>
+              <a className="text-link" href={project.link} target="_blank" rel="noreferrer">
+                Open on GitHub
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="logs" className="content-section log-layout">
+        <div className="section-heading">
+          <p className="section-kicker">Engineering Logs</p>
+          <h2>Blog posts reframed as system logs instead of diary entries.</h2>
+        </div>
+
+        <div className="log-list">
+          {logs.map((log, index) => (
+            <article
+              className="log-card surface-card"
+              style={{ '--delay': `${index * 80}ms` } as React.CSSProperties}
+              key={log.id}
+            >
+              <span className="log-id">{log.id}</span>
+              <h3>{log.title}</h3>
+              <p>{log.summary}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="about" className="content-section">
+        <div className="about-card surface-card">
+          <p className="section-kicker">About</p>
+          <h2>Not prompt-only. System-level engineering.</h2>
+          <p>
+            I build end-to-end agent systems with interfaces, tool contracts, schema understanding, retrieval layers, frontend surfaces, and deployment paths that survive beyond demos.
+          </p>
+          <p className="about-quote">
+            I build systems where LLMs are not demos, but production components.
+          </p>
+        </div>
+      </section>
     </main>
   )
 }

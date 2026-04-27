@@ -1,9 +1,9 @@
 :root {
-  color: #f8fbff;
-  background: #071014;
-  font-family: 'Avenir Next', 'SF Pro Display', 'Segoe UI', sans-serif;
+  color: #183042;
+  background: #f4f6f8;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
   font-synthesis: none;
-  text-rendering: geometricPrecision;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -20,7 +20,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
+  background: #f4f6f8;
 }
 
 button,
